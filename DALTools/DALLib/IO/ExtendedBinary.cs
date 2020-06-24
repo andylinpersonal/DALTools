@@ -322,6 +322,8 @@ namespace DALLib.IO
                 {
                     if (expected.Length + padding >= 0x14)
                         JumpBehind((expected.Length + padding) - 0x14 + 1);
+                    else if (expected.Length + padding >= 0x0c)
+                        JumpBehind((expected.Length + padding) - 0x0c + 1);
                     else if (expected.Length + padding >= 0x08)
                         JumpBehind((expected.Length + padding) - 0x08 + 1);
                     break;
@@ -346,6 +348,8 @@ namespace DALLib.IO
                 {
                     if (expected.Length + padding >= 0x14)
                         JumpBehind((expected.Length + padding) - 0x14 + 1);
+                    else if (expected.Length + padding >= 0x0c)
+                        JumpBehind((expected.Length + padding) - 0x0c + 1);
                     else if (expected.Length + padding >= 0x08)
                         JumpBehind((expected.Length + padding) - 0x08 + 1);
                     break;
